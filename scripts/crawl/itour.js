@@ -21,7 +21,7 @@ async function crawlPage(pageIndex) {
       'Referer': `${LIST_URL}?pageNm=fstv`,
       'User-Agent': 'Mozilla/5.0 (compatible; crawler)',
     },
-    timeout: 10000,
+    timeout: 30000,
   });
 
   const $ = cheerio.load(res.data);
@@ -31,8 +31,10 @@ async function crawlPage(pageIndex) {
   $('ul.event-list > li, ul.list > li, .content-list > li').each((_, el) => {
     const $el = $(el);
 
-    const title = $el.find('a').first().text().trim();
-    if (!title) return;
+    const $link = $el.find('a[name="btn_detail"]');
+    const title = $link.text().trim();
+    const cotId = $link.attr('cotid') || $link.attr('cotId');
+    if (!title || !cotId) return;
 
     // 날짜 텍스트: "2026.10.03 ~2026.10.04"
     const dateRaw = $el.text().match(/\d{4}\.\d{2}\.\d{2}\s*~\s*\d{4}\.\d{2}\.\d{2}/);
@@ -42,11 +44,12 @@ async function crawlPage(pageIndex) {
     // 카테고리 텍스트 (축제/공연/전시 등)
     const categoryRaw = $el.find('span, em, .category').first().text().trim();
 
-    // 이미지
-    const imgSrc = $el.find('img').attr('src') || '';
+    // 이미지 (btn_share의 imgsrc 속성 또는 img 태그)
+    const $share = $el.find('button[name="btn_share"]');
+    const imgSrc = $share.attr('imgsrc') || $el.find('img').attr('src') || '';
     const imageUrl = imgSrc ? (imgSrc.startsWith('http') ? imgSrc : `${BASE_URL}${imgSrc}`) : undefined;
 
-    // 장소 (list 페이지에 없으면 빈 값, 나중에 수작업 보완)
+    // 장소
     const location = $el.find('.place, .location').text().trim() || '인천';
 
     events.push({
@@ -57,7 +60,7 @@ async function crawlPage(pageIndex) {
       district: inferDistrict(location),
       category: normalizeCategory(categoryRaw || title),
       tags: ['오프라인'],
-      sourceUrl: `${LIST_URL}?pageNm=fstv`,
+      sourceUrl: `${BASE_URL}/ssst/ssst/detail.do?cotId=${cotId}`,
       imageUrl,
       organizer: '인천관광재단',
       isFree: false,

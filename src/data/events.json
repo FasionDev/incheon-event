@@ -9,11 +9,11 @@
     "tags": [
       "오프라인"
     ],
-    "sourceUrl": "https://itour.incheon.go.kr/ssst/ssst/list.do?pageNm=fstv",
+    "sourceUrl": "https://itour.incheon.go.kr/ssst/ssst/detail.do?cotId=APD23042010000822833",
     "imageUrl": "https://itour.incheon.go.kr/common/viewImg.do?imgId=API26042804400940139",
     "organizer": "인천관광재단",
     "isFree": false,
-    "id": "1"
+    "id": "11"
   },
   {
     "title": "가족의 달 어린이 축제",
@@ -25,11 +25,11 @@
     "tags": [
       "오프라인"
     ],
-    "sourceUrl": "https://itour.incheon.go.kr/ssst/ssst/list.do?pageNm=fstv",
+    "sourceUrl": "https://itour.incheon.go.kr/ssst/ssst/detail.do?cotId=APD23042810001178735",
     "imageUrl": "https://itour.incheon.go.kr/common/viewImg.do?imgId=DBM26043009102983901",
     "organizer": "인천관광재단",
     "isFree": false,
-    "id": "2"
+    "id": "12"
   },
   {
     "title": "제14회 디아스포라영화제",
@@ -41,11 +41,11 @@
     "tags": [
       "오프라인"
     ],
-    "sourceUrl": "https://itour.incheon.go.kr/ssst/ssst/list.do?pageNm=fstv",
+    "sourceUrl": "https://itour.incheon.go.kr/ssst/ssst/detail.do?cotId=APD24020810011059663",
     "imageUrl": "https://itour.incheon.go.kr/common/viewImg.do?imgId=DBM26051810412210139",
     "organizer": "인천관광재단",
     "isFree": false,
-    "id": "3"
+    "id": "8"
   },
   {
     "title": "2026 찾아가는 문화공연 <요기조기 데이>",
@@ -57,11 +57,11 @@
     "tags": [
       "오프라인"
     ],
-    "sourceUrl": "https://itour.incheon.go.kr/ssst/ssst/list.do?pageNm=fstv",
+    "sourceUrl": "https://itour.incheon.go.kr/ssst/ssst/detail.do?cotId=FAC26051602300517386",
     "imageUrl": "https://itour.incheon.go.kr/common/viewImg.do?imgId=DBM26052209434574914",
     "organizer": "인천관광재단",
     "isFree": false,
-    "id": "4"
+    "id": "10"
   },
   {
     "title": "2026 인천 스카이하운즈 도그스포츠 페스티벌",
@@ -73,11 +73,11 @@
     "tags": [
       "오프라인"
     ],
-    "sourceUrl": "https://itour.incheon.go.kr/ssst/ssst/list.do?pageNm=fstv",
+    "sourceUrl": "https://itour.incheon.go.kr/ssst/ssst/detail.do?cotId=ITD26052011150864912",
     "imageUrl": "https://itour.incheon.go.kr/common/viewImg.do?imgId=DBM26052011152653066",
     "organizer": "인천관광재단",
     "isFree": false,
-    "id": "5"
+    "id": "9"
   },
   {
     "title": "2026 인천낚시박람회",
@@ -89,7 +89,7 @@
     "tags": [
       "오프라인"
     ],
-    "sourceUrl": "https://itour.incheon.go.kr/ssst/ssst/list.do?pageNm=fstv",
+    "sourceUrl": "https://itour.incheon.go.kr/ssst/ssst/detail.do?cotId=APD24080710001741907",
     "imageUrl": "https://itour.incheon.go.kr/common/viewImg.do?imgId=DBM26052713364829368",
     "organizer": "인천관광재단",
     "isFree": false,
@@ -105,11 +105,11 @@
     "tags": [
       "오프라인"
     ],
-    "sourceUrl": "https://itour.incheon.go.kr/ssst/ssst/list.do?pageNm=fstv",
+    "sourceUrl": "https://itour.incheon.go.kr/ssst/ssst/detail.do?cotId=APD25103107001482766",
     "imageUrl": "https://itour.incheon.go.kr/common/viewImg.do?imgId=API26032604415641624",
     "organizer": "인천관광재단",
     "isFree": false,
-    "id": "7"
+    "id": "5"
   },
   {
     "title": "[국립인천해양박물관] 바다의 날 기념 제 1회 바다네컷 그리기 대회",
@@ -121,11 +121,11 @@
     "tags": [
       "오프라인"
     ],
-    "sourceUrl": "https://itour.incheon.go.kr/ssst/ssst/list.do?pageNm=fstv",
+    "sourceUrl": "https://itour.incheon.go.kr/ssst/ssst/detail.do?cotId=FAC26051202300575492",
     "imageUrl": "https://itour.incheon.go.kr/common/viewImg.do?imgId=DBM26051309041369223",
     "organizer": "인천관광재단",
     "isFree": false,
-    "id": "8"
+    "id": "7"
   },
   {
     "title": "인천펜타포트 락 페스티벌",
@@ -137,11 +137,11 @@
     "tags": [
       "오프라인"
     ],
-    "sourceUrl": "https://itour.incheon.go.kr/ssst/ssst/list.do?pageNm=fstv",
+    "sourceUrl": "https://itour.incheon.go.kr/ssst/ssst/detail.do?cotId=APD21112609184717505",
     "imageUrl": "https://itour.incheon.go.kr/common/viewImg.do?imgId=API26060304401521298",
     "organizer": "인천관광재단",
     "isFree": false,
-    "id": "9"
+    "id": "4"
   },
   {
     "title": "국가유산 미디어아트",
@@ -153,11 +153,11 @@
     "tags": [
       "오프라인"
     ],
-    "sourceUrl": "https://itour.incheon.go.kr/ssst/ssst/list.do?pageNm=fstv",
+    "sourceUrl": "https://itour.incheon.go.kr/ssst/ssst/detail.do?cotId=APD26040304404171613",
     "imageUrl": "https://itour.incheon.go.kr/common/viewImg.do?imgId=API26043004400605428",
     "organizer": "인천관광재단",
     "isFree": false,
-    "id": "10"
+    "id": "1"
   },
   {
     "title": "부평풍물대축제",
@@ -169,11 +169,11 @@
     "tags": [
       "오프라인"
     ],
-    "sourceUrl": "https://itour.incheon.go.kr/ssst/ssst/list.do?pageNm=fstv",
+    "sourceUrl": "https://itour.incheon.go.kr/ssst/ssst/detail.do?cotId=APD21112609174959336",
     "imageUrl": "https://itour.incheon.go.kr/common/viewImg.do?imgId=API26052704402881027",
     "organizer": "인천관광재단",
     "isFree": false,
-    "id": "11"
+    "id": "3"
   },
   {
     "title": "2026년 1883인천 짜장면축제",
@@ -185,10 +185,10 @@
     "tags": [
       "오프라인"
     ],
-    "sourceUrl": "https://itour.incheon.go.kr/ssst/ssst/list.do?pageNm=fstv",
+    "sourceUrl": "https://itour.incheon.go.kr/ssst/ssst/detail.do?cotId=ITD25092616174791248",
     "imageUrl": "https://itour.incheon.go.kr/common/viewImg.do?imgId=DBM26051817380729027",
     "organizer": "인천관광재단",
     "isFree": false,
-    "id": "12"
+    "id": "2"
   }
 ]
