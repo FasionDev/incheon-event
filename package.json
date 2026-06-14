@@ -6,7 +6,10 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "crawl": "node scripts/crawl/index.js",
+    "crawl:merge": "node scripts/crawl/merge.js",
+    "archive": "node scripts/crawl/archive.js"
   },
   "dependencies": {
     "next": "16.2.9",
@@ -18,6 +21,8 @@
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
+    "axios": "^1.17.0",
+    "cheerio": "^1.2.0",
     "eslint": "^9",
     "eslint-config-next": "16.2.9",
     "tailwindcss": "^4",
