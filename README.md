@@ -2,7 +2,7 @@
 
 인천시청, 각 구청, 공공기관의 행사를 모아 소개하는 정적 웹사이트입니다.
 
-**사이트 주소:** https://chung10kr.github.io/inchecon-event
+**사이트 주소:** https://fasiondev.github.io/inchecon-event
 
 ---
 
@@ -10,7 +10,7 @@
 
 새로운 행사를 제보하고 싶다면 GitHub Issue를 통해 등록 요청을 해주세요.
 
-👉 [행사 등록 요청하기](https://github.com/Chung10Kr/inchecon-event/issues/new?template=event-request.md&title=%5B%EC%9D%B4%EB%B2%A4%ED%8A%B8+%EB%93%B1%EB%A1%9D%5D&labels=event-request)
+👉 [행사 등록 요청하기](https://github.com/FasionDev/inchecon-event/issues/new?template=event-request.md&title=%5B%EC%9D%B4%EB%B2%A4%ED%8A%B8+%EB%93%B1%EB%A1%9D%5D&labels=event-request)
 
 양식에 맞게 행사명, 날짜, 장소, 출처 링크를 작성해 주시면 검토 후 반영합니다.
 
