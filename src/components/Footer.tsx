@@ -1,4 +1,4 @@
-const GITHUB_URL = 'https://github.com/Chung10Kr/inchecon-event';
+const GITHUB_URL = 'https://github.com/FasionDev/incheon-event';
 
 export default function Footer() {
   return (
@@ -9,7 +9,7 @@ export default function Footer() {
             🌊 인천이벤트
           </p>
           <p className="text-xs mt-1" style={{ color: 'var(--text-dim)' }}>
-            인천의 행사를 한눈에 — Made by Chung10Kr
+            인천의 행사를 한눈에 — Made by FasionDev
           </p>
         </div>
         <a
