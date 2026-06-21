@@ -15,9 +15,6 @@ export const metadata: Metadata = {
   description: '인천시청, 각 구청, 공식 기관에서 주최하는 행사를 모아 소개합니다.',
   verification: {
     google: 'htSrTa_Dy0f_YUjM2vM3X1tA1XlRMdhMW0aMFPnfsEI',
-    other: {
-      'naver-site-verification': '90a8ea12d8ba6cce3a352110abd16bd8469cc4b5',
-    },
   },
 };
 
