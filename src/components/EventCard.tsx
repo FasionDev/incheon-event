@@ -1,4 +1,6 @@
+'use client';
 import Image from 'next/image';
+import { useState } from 'react';
 import { Event } from '@/types/event';
 
 const CATEGORY_GRADIENTS: Record<string, string> = {
@@ -56,6 +58,7 @@ interface Props {
 }
 
 export default function EventCard({ event, isPast = false }: Props) {
+  const [imgError, setImgError] = useState(false);
   const dday = getDday(event.startDate);
   const gradient = CATEGORY_GRADIENTS[event.category] ?? CATEGORY_GRADIENTS['기타'];
   const icon = CATEGORY_ICONS[event.category] ?? '📌';
@@ -73,7 +76,7 @@ export default function EventCard({ event, isPast = false }: Props) {
         className="relative flex-shrink-0 rounded-xl overflow-hidden"
         style={{ width: 200, height: 134 }}
       >
-        {event.imageUrl ? (
+        {event.imageUrl && !imgError ? (
           <>
             <Image
               src={event.imageUrl}
@@ -81,6 +84,7 @@ export default function EventCard({ event, isPast = false }: Props) {
               fill
               className="object-cover group-hover:scale-105 transition-transform duration-300"
               unoptimized
+              onError={() => setImgError(true)}
             />
             {isPast ? (
               <span

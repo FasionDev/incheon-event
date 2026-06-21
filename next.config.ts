@@ -2,7 +2,7 @@ import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
   output: 'export',
-  basePath: '/inchecon-event',
+  basePath: '/incheon-event',
   images: {
     unoptimized: true,
   },
