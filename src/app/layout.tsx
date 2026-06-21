@@ -11,6 +11,7 @@ const geistSans = Geist({
 });
 
 export const metadata: Metadata = {
+  icons: { icon: 'data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><text y=".9em" font-size="90">🌊</text></svg>' },
   title: '인천이벤트 | 인천의 행사를 한눈에',
   description: '인천시청, 각 구청, 공식 기관에서 주최하는 행사를 모아 소개합니다.',
   keywords: ['인천 행사', '인천 축제', '인천 이벤트', '인천 문화행사', '인천 공연', '인천 전시', '2026 인천'],
