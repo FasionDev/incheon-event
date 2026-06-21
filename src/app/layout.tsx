@@ -13,6 +13,9 @@ const geistSans = Geist({
 export const metadata: Metadata = {
   title: '인천이벤트 | 인천의 행사를 한눈에',
   description: '인천시청, 각 구청, 공식 기관에서 주최하는 행사를 모아 소개합니다.',
+  verification: {
+    google: 'htSrTa_Dy0f_YUjM2vM3X1tA1XlRMdhMW0aMFPnfsEI',
+  },
 };
 
 export default function RootLayout({
