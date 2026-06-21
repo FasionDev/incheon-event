@@ -21,11 +21,20 @@ export const metadata: Metadata = {
     siteName: '인천이벤트',
     locale: 'ko_KR',
     type: 'website',
+    images: [
+      {
+        url: 'https://fasiondev.github.io/incheon-event/og-image.png',
+        width: 1200,
+        height: 630,
+        alt: '인천이벤트 - 인천의 행사를 한눈에',
+      },
+    ],
   },
   twitter: {
-    card: 'summary',
+    card: 'summary_large_image',
     title: '인천이벤트 | 인천의 행사를 한눈에',
     description: '인천시청, 각 구청, 공식 기관에서 주최하는 행사를 모아 소개합니다.',
+    images: ['https://fasiondev.github.io/incheon-event/og-image.png'],
   },
   verification: {
     google: 'htSrTa_Dy0f_YUjM2vM3X1tA1XlRMdhMW0aMFPnfsEI',
