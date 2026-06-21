@@ -60,8 +60,8 @@
 | 저장소 FasionDev 계정으로 이전 | ✅ 완료 |
 | 이미지 폴백 처리 | ✅ 완료 |
 | Google Analytics 연결 (G-WYQYGC8JH2) | ✅ 완료 |
-| Google Search Console 등록 | ⬜ 예정 |
-| 네이버 서치어드바이저 등록 | ⬜ 예정 |
+| Google Search Console 등록 + sitemap 제출 | ✅ 완료 |
+| 네이버 서치어드바이저 등록 | ⏭ 스킵 (GitHub Pages 공유 도메인 한계) |
 | meta 태그 보강 | ⬜ 예정 |
 | sitemap.xml 생성 | ⬜ 예정 |
 | 네이버 블로그 운영 | ⬜ 예정 |
