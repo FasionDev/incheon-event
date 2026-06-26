@@ -49,7 +49,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ko" className={`${geistSans.variable} h-full antialiased`}>
-      <head>
+      <body className="min-h-full flex flex-col bg-gray-50">
+        <Header />
+        {children}
+        <Footer />
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-WYQYGC8JH2"
           strategy="afterInteractive"
@@ -62,11 +65,6 @@ export default function RootLayout({
             gtag('config', 'G-WYQYGC8JH2');
           `}
         </Script>
-      </head>
-      <body className="min-h-full flex flex-col bg-gray-50">
-        <Header />
-        {children}
-        <Footer />
       </body>
     </html>
   );
