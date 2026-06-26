@@ -176,6 +176,22 @@
     "id": "3"
   },
   {
+    "title": "소래포구축제",
+    "startDate": "2026-10-02",
+    "endDate": "2026-10-04",
+    "location": "인천",
+    "district": "",
+    "category": "축제",
+    "tags": [
+      "오프라인"
+    ],
+    "sourceUrl": "https://itour.incheon.go.kr/ssst/ssst/detail.do?cotId=APD21112609171373617",
+    "imageUrl": "https://itour.incheon.go.kr/common/viewImg.do?imgId=API26061604400599854",
+    "organizer": "인천관광재단",
+    "isFree": false,
+    "id": "13"
+  },
+  {
     "title": "2026년 1883인천 짜장면축제",
     "startDate": "2026-10-03",
     "endDate": "2026-10-04",

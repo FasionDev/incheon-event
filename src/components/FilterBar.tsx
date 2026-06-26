@@ -45,7 +45,7 @@ export default function FilterBar({ selected, onSelect, showFreeOnly, onToggleFr
         className="px-3 py-1.5 rounded-full text-sm font-medium transition-all"
         style={
           showFreeOnly
-            ? { background: '#052e16', color: '#4ade80', border: '1px solid #166534' }
+            ? { background: 'var(--badge-free-bg)', color: 'var(--badge-free-color)', border: '1px solid var(--badge-free-border)' }
             : { background: 'var(--bg-card)', color: 'var(--text-muted)', border: '1px solid var(--border)' }
         }
       >

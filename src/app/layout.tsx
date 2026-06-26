@@ -4,6 +4,7 @@ import Script from 'next/script';
 import './globals.css';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
+import ThemeProvider from '@/components/ThemeProvider';
 
 const geistSans = Geist({
   variable: '--font-geist-sans',
@@ -48,23 +49,25 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="ko" className={`${geistSans.variable} h-full antialiased`}>
-      <body className="min-h-full flex flex-col bg-gray-50">
-        <Header />
-        {children}
-        <Footer />
-        <Script
-          src="https://www.googletagmanager.com/gtag/js?id=G-WYQYGC8JH2"
-          strategy="afterInteractive"
-        />
-        <Script id="google-analytics" strategy="afterInteractive">
-          {`
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', 'G-WYQYGC8JH2');
-          `}
-        </Script>
+    <html lang="ko" className={`${geistSans.variable} h-full antialiased`} suppressHydrationWarning>
+      <body className="min-h-full flex flex-col">
+        <ThemeProvider>
+          <Header />
+          {children}
+          <Footer />
+          <Script
+            src="https://www.googletagmanager.com/gtag/js?id=G-WYQYGC8JH2"
+            strategy="afterInteractive"
+          />
+          <Script id="google-analytics" strategy="afterInteractive">
+            {`
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'G-WYQYGC8JH2');
+            `}
+          </Script>
+        </ThemeProvider>
       </body>
     </html>
   );

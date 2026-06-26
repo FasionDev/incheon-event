@@ -2,7 +2,7 @@ const GITHUB_URL = 'https://github.com/FasionDev/incheon-event';
 
 export default function Footer() {
   return (
-    <footer style={{ borderTop: '1px solid var(--border)', background: '#111111' }} className="mt-auto">
+    <footer style={{ borderTop: '1px solid var(--border)', background: 'var(--bg)' }} className="mt-auto">
       <div className="max-w-3xl mx-auto px-4 py-8 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
         <div>
           <p className="text-sm font-bold" style={{ color: 'var(--text)' }}>
