@@ -47,10 +47,11 @@
 
 ## 2단계 — 측정 기반 만들기
 
-### [ ] Google Analytics 연결
+### [x] Google Analytics 연결
 - GA4 계정 생성 후 추적 코드를 `src/app/layout.tsx`에 삽입
 - 방문자 수, 유입 경로, 체류 시간 측정 시작
 - **목표**: 얼마나 오는지 알아야 광고 효과를 측정할 수 있음
+- Script 태그 위치 버그 수정 (head → body, afterInteractive 정상 동작)
 
 ### [ ] Google Search Console 등록
 - 사이트를 구글에 직접 신고 → 검색 결과에 더 빠르게 노출
@@ -99,9 +100,10 @@
 
 ## 6단계 — 디자인 개선
 
-### [ ] 라이트/다크 모드
+### [x] 라이트/다크 모드
 - 시스템 설정 자동 감지 + 수동 토글 버튼
 - CSS 변수로 색상 체계 정리
+- next-themes + CSS 변수 방식으로 구현, 헤더에 ☀️/🌙 토글 버튼 추가
 
 ### [ ] 전체 UI 리뉴얼
 - 행사 카드 디자인 개선 (이미지 비율, 그림자, hover 효과)
@@ -137,7 +139,7 @@
 | 사이트 배포 (GitHub Pages) | ✅ 완료 |
 | 저장소 FasionDev 계정으로 이전 | ✅ 완료 |
 | 이미지 폴백 처리 | ✅ 완료 |
-| Google Analytics 연결 (G-WYQYGC8JH2) | ✅ 완료 |
+| Google Analytics 연결 (G-WYQYGC8JH2) | ✅ 완료 (Script 버그 수정 포함) |
 | Google Search Console 등록 + sitemap 제출 | ✅ 완료 |
 | 네이버 서치어드바이저 등록 | ⏭ 스킵 (GitHub Pages 공유 도메인 한계) |
 | meta 태그 보강 (keywords, OG, Twitter Card) | ✅ 완료 |
@@ -146,3 +148,5 @@
 | 티스토리 블로그 포스팅 (바이브코딩 체험기) | ✅ 완료 |
 | 인스타그램 포스팅 (사이트 홍보 카드) | ✅ 완료 |
 | 네이버 블로그 운영 | ⬜ 예정 |
+| 라이트/다크 모드 토글 | ✅ 완료 |
+| 소래포구축제 데이터 추가 (2026-10-02) | ✅ 완료 |
