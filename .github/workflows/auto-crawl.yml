@@ -1,0 +1,41 @@
+name: 자동 행사 수집
+
+on:
+  schedule:
+    # 매일 밤 12시 KST = UTC 15:00
+    - cron: '0 15 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  crawl:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - run: npm ci
+
+      - name: 크롤링 실행
+        run: npm run crawl:auto
+
+      - name: 변경사항 확인 및 커밋
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
+          if git diff --quiet src/data/events.json; then
+            echo "신규 행사 없음 — 커밋 스킵"
+          else
+            ADDED=$(git diff src/data/events.json | grep '^+' | grep '"title"' | wc -l | tr -d ' ')
+            git add src/data/events.json
+            git commit -m "chore: 행사 데이터 자동 업데이트 (+${ADDED}개)"
+            git push
+            echo "커밋 완료"
+          fi

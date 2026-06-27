@@ -9,6 +9,7 @@
     "lint": "eslint",
     "crawl": "node scripts/crawl/index.js",
     "crawl:merge": "node scripts/crawl/merge.js",
+    "crawl:auto": "node scripts/crawl/auto.js",
     "archive": "node scripts/crawl/archive.js"
   },
   "dependencies": {
