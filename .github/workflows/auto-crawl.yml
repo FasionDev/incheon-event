@@ -1,13 +1,14 @@
 name: 자동 행사 수집
 
 on:
-  schedule:
-    # 매일 밤 12시 KST = UTC 15:00
-    - cron: '0 15 * * *'
+  # schedule:
+  #   # 매일 밤 12시 KST = UTC 15:00
+  #   - cron: '0 15 * * *'
   workflow_dispatch:
 
 permissions:
   contents: write
+  actions: write
 
 jobs:
   crawl:
@@ -25,7 +26,35 @@ jobs:
       - name: 크롤링 실행
         run: npm run crawl:auto
 
+      - name: 수집 결과 요약
+        run: |
+          node -e "
+            const fs = require('fs');
+            const s = JSON.parse(fs.readFileSync('crawl-summary.json', 'utf-8'));
+            const lines = [];
+            if (s.added.length === 0) {
+              lines.push('## 신규 행사 없음');
+              lines.push('');
+              lines.push('크롤링을 완료했으나 새로운 행사가 없습니다.');
+            } else {
+              lines.push('## ✅ 신규 행사 ' + s.added.length + '개 추가');
+              lines.push('');
+              lines.push('| 행사명 | 시작일 | 주최 |');
+              lines.push('|---|---|---|');
+              s.added.forEach(e => lines.push('| ' + e.title + ' | ' + e.startDate + ' | ' + (e.organizer || '-') + ' |'));
+              lines.push('');
+              lines.push('전체: **' + s.totalBefore + '개** → **' + s.totalAfter + '개**');
+            }
+            if (s.invalidImages > 0) {
+              lines.push('');
+              lines.push('> ⚠️ 유효하지 않은 이미지 ' + s.invalidImages + '개 제거됨');
+            }
+            fs.appendFileSync(process.env.GITHUB_STEP_SUMMARY, lines.join('\n') + '\n');
+          "
+
       - name: 변경사항 확인 및 커밋
+        env:
+          GH_TOKEN: ${{ github.token }}
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
@@ -33,9 +62,16 @@ jobs:
           if git diff --quiet src/data/events.json; then
             echo "신규 행사 없음 — 커밋 스킵"
           else
-            ADDED=$(git diff src/data/events.json | grep '^+' | grep '"title"' | wc -l | tr -d ' ')
+            ADDED=$(node -e "const s=require('./crawl-summary.json');console.log(s.added.length)")
             git add src/data/events.json
             git commit -m "chore: 행사 데이터 자동 업데이트 (+${ADDED}개)"
             git push
             echo "커밋 완료"
+            echo "DEPLOYED=true" >> $GITHUB_ENV
           fi
+
+      - name: 배포 워크플로우 트리거
+        if: env.DEPLOYED == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh workflow run deploy.yml --ref main

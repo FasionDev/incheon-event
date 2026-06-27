@@ -10,6 +10,7 @@ const { crawlAll: crawlIfac } = require('./ifac');
 const { crawlAll: crawlItour } = require('./itour');
 
 const EVENTS_PATH = path.join(__dirname, '../../src/data/events.json');
+const SUMMARY_PATH = path.join(__dirname, '../../crawl-summary.json');
 const IMAGE_CHECK_TIMEOUT_MS = 5000;
 const IMAGE_CHECK_CONCURRENCY = 5;
 
@@ -64,13 +65,18 @@ async function main() {
     crawlItour().catch((e) => { console.error('[itour 오류]', e.message); return []; }),
   ]);
 
-  // 크롤링 결과 중복 제거
+  // 종료된 행사 제외 (endDate 또는 startDate 기준)
+  const today = new Date();
+  today.setHours(0, 0, 0, 0);
+
+  // 크롤링 결과 중복 제거 + 과거 행사 제외
   const seen = new Set();
   const crawled = [...ifacEvents, ...itourEvents].filter((e) => {
     const key = e.title + e.startDate;
     if (seen.has(key)) return false;
     seen.add(key);
-    return true;
+    const endDateStr = e.endDate || e.startDate;
+    return new Date(endDateStr) >= today;
   });
 
   // 기존 데이터와 중복 제거
@@ -83,6 +89,7 @@ async function main() {
 
   if (candidates.length === 0) {
     console.log('신규 행사 없음 — events.json 변경 없음');
+    fs.writeFileSync(SUMMARY_PATH, JSON.stringify({ added: [], totalBefore: existing.length, totalAfter: existing.length, invalidImages: 0 }), 'utf-8');
     process.exit(0);
   }
 
@@ -117,6 +124,13 @@ async function main() {
 
   fs.writeFileSync(EVENTS_PATH, JSON.stringify(merged, null, 2), 'utf-8');
   console.log(`\nevents.json 업데이트 완료: ${existing.length}개 → ${merged.length}개`);
+
+  fs.writeFileSync(SUMMARY_PATH, JSON.stringify({
+    added: newEvents.map((e) => ({ title: e.title, startDate: e.startDate, organizer: e.organizer || '' })),
+    totalBefore: existing.length,
+    totalAfter: merged.length,
+    invalidImages: invalidCount,
+  }), 'utf-8');
 }
 
 main().catch((e) => {
