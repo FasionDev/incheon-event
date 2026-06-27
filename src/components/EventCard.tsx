@@ -178,22 +178,8 @@ export default function EventCard({ event, isPast = false }: Props) {
     </>
   );
 
-  if (event.sourceUrl) {
-    return (
-      <a
-        href={event.sourceUrl}
-        target="_blank"
-        rel="noopener noreferrer"
-        className={sharedClassName}
-        style={sharedStyle}
-      >
-        {content}
-      </a>
-    );
-  }
-
   return (
-    <Link href={`/events/${event.id}`} className={sharedClassName} style={sharedStyle}>
+    <Link href={`/events/${event.slug}`} className={sharedClassName} style={sharedStyle}>
       {content}
     </Link>
   );

@@ -1,5 +1,7 @@
 [
   {
+    "id": "11",
+    "slug": "2026-생물사랑-어린이-축제",
     "title": "2026 생물사랑 어린이 축제",
     "startDate": "2026-05-05",
     "endDate": "2026-05-05",
@@ -12,10 +14,11 @@
     "sourceUrl": "https://itour.incheon.go.kr/ssst/ssst/detail.do?cotId=APD23042010000822833",
     "imageUrl": "https://itour.incheon.go.kr/common/viewImg.do?imgId=API26042804400940139",
     "organizer": "인천관광재단",
-    "isFree": false,
-    "id": "11"
+    "isFree": false
   },
   {
+    "id": "12",
+    "slug": "가족의달-어린이-축제",
     "title": "가족의 달 어린이 축제",
     "startDate": "2026-05-05",
     "endDate": "2026-05-05",
@@ -28,10 +31,11 @@
     "sourceUrl": "https://itour.incheon.go.kr/ssst/ssst/detail.do?cotId=APD23042810001178735",
     "imageUrl": "https://itour.incheon.go.kr/common/viewImg.do?imgId=DBM26043009102983901",
     "organizer": "인천관광재단",
-    "isFree": false,
-    "id": "12"
+    "isFree": false
   },
   {
+    "id": "8",
+    "slug": "제14회-디아스포라영화제",
     "title": "제14회 디아스포라영화제",
     "startDate": "2026-05-22",
     "endDate": "2026-05-26",
@@ -44,10 +48,11 @@
     "sourceUrl": "https://itour.incheon.go.kr/ssst/ssst/detail.do?cotId=APD24020810011059663",
     "imageUrl": "https://itour.incheon.go.kr/common/viewImg.do?imgId=DBM26051810412210139",
     "organizer": "인천관광재단",
-    "isFree": false,
-    "id": "8"
+    "isFree": false
   },
   {
+    "id": "10",
+    "slug": "2026-찾아가는-문화공연-요기조기-데이",
     "title": "2026 찾아가는 문화공연 <요기조기 데이>",
     "startDate": "2026-05-23",
     "endDate": "2026-05-23",
@@ -60,10 +65,11 @@
     "sourceUrl": "https://itour.incheon.go.kr/ssst/ssst/detail.do?cotId=FAC26051602300517386",
     "imageUrl": "https://itour.incheon.go.kr/common/viewImg.do?imgId=DBM26052209434574914",
     "organizer": "인천관광재단",
-    "isFree": false,
-    "id": "10"
+    "isFree": false
   },
   {
+    "id": "9",
+    "slug": "2026-인천-스카이하운즈-도그스포츠-페스티벌",
     "title": "2026 인천 스카이하운즈 도그스포츠 페스티벌",
     "startDate": "2026-05-24",
     "endDate": "2026-05-24",
@@ -76,10 +82,11 @@
     "sourceUrl": "https://itour.incheon.go.kr/ssst/ssst/detail.do?cotId=ITD26052011150864912",
     "imageUrl": "https://itour.incheon.go.kr/common/viewImg.do?imgId=DBM26052011152653066",
     "organizer": "인천관광재단",
-    "isFree": false,
-    "id": "9"
+    "isFree": false
   },
   {
+    "id": "6",
+    "slug": "2026-인천낚시박람회",
     "title": "2026 인천낚시박람회",
     "startDate": "2026-05-29",
     "endDate": "2026-05-31",
@@ -92,10 +99,11 @@
     "sourceUrl": "https://itour.incheon.go.kr/ssst/ssst/detail.do?cotId=APD24080710001741907",
     "imageUrl": "https://itour.incheon.go.kr/common/viewImg.do?imgId=DBM26052713364829368",
     "organizer": "인천관광재단",
-    "isFree": false,
-    "id": "6"
+    "isFree": false
   },
   {
+    "id": "5",
+    "slug": "오슬로우-빈티지-마켓",
     "title": "오슬로우 빈티지 마켓",
     "startDate": "2026-05-30",
     "endDate": "2026-05-31",
@@ -108,10 +116,11 @@
     "sourceUrl": "https://itour.incheon.go.kr/ssst/ssst/detail.do?cotId=APD25103107001482766",
     "imageUrl": "https://itour.incheon.go.kr/common/viewImg.do?imgId=API26032604415641624",
     "organizer": "인천관광재단",
-    "isFree": false,
-    "id": "5"
+    "isFree": false
   },
   {
+    "id": "7",
+    "slug": "국립인천해양박물관-바다의날-바다네컷-그리기-대회",
     "title": "[국립인천해양박물관] 바다의 날 기념 제 1회 바다네컷 그리기 대회",
     "startDate": "2026-05-30",
     "endDate": "2026-05-30",
@@ -124,16 +133,16 @@
     "sourceUrl": "https://itour.incheon.go.kr/ssst/ssst/detail.do?cotId=FAC26051202300575492",
     "imageUrl": "https://itour.incheon.go.kr/common/viewImg.do?imgId=DBM26051309041369223",
     "organizer": "인천관광재단",
-    "isFree": false,
-    "id": "7"
+    "isFree": false
   },
   {
     "id": "14",
+    "slug": "제물포구-출범-경축행사",
     "title": "제물포구 출범 경축행사",
     "startDate": "2026-07-07",
     "endDate": "2026-07-07",
     "location": "상상플랫폼 (월미로 33)",
-    "district": null,
+    "district": "",
     "category": "문화/공연",
     "tags": [
       "오프라인",
@@ -145,6 +154,8 @@
     "imageUrl": "/images/events/14.jpg"
   },
   {
+    "id": "4",
+    "slug": "인천펜타포트-락-페스티벌",
     "title": "인천펜타포트 락 페스티벌",
     "startDate": "2026-07-31",
     "endDate": "2026-08-02",
@@ -157,10 +168,11 @@
     "sourceUrl": "https://itour.incheon.go.kr/ssst/ssst/detail.do?cotId=APD21112609184717505",
     "imageUrl": "https://itour.incheon.go.kr/common/viewImg.do?imgId=API26060304401521298",
     "organizer": "인천관광재단",
-    "isFree": false,
-    "id": "4"
+    "isFree": false
   },
   {
+    "id": "1",
+    "slug": "국가유산-미디어아트",
     "title": "국가유산 미디어아트",
     "startDate": "2026-08-14",
     "endDate": "2026-10-18",
@@ -173,10 +185,11 @@
     "sourceUrl": "https://itour.incheon.go.kr/ssst/ssst/detail.do?cotId=APD26040304404171613",
     "imageUrl": "https://itour.incheon.go.kr/common/viewImg.do?imgId=API26043004400605428",
     "organizer": "인천관광재단",
-    "isFree": false,
-    "id": "1"
+    "isFree": false
   },
   {
+    "id": "3",
+    "slug": "부평풍물대축제",
     "title": "부평풍물대축제",
     "startDate": "2026-10-02",
     "endDate": "2026-10-04",
@@ -189,10 +202,11 @@
     "sourceUrl": "https://itour.incheon.go.kr/ssst/ssst/detail.do?cotId=APD21112609174959336",
     "imageUrl": "https://itour.incheon.go.kr/common/viewImg.do?imgId=API26052704402881027",
     "organizer": "인천관광재단",
-    "isFree": false,
-    "id": "3"
+    "isFree": false
   },
   {
+    "id": "13",
+    "slug": "소래포구축제",
     "title": "소래포구축제",
     "startDate": "2026-10-02",
     "endDate": "2026-10-04",
@@ -205,10 +219,11 @@
     "sourceUrl": "https://itour.incheon.go.kr/ssst/ssst/detail.do?cotId=APD21112609171373617",
     "imageUrl": "https://itour.incheon.go.kr/common/viewImg.do?imgId=API26061604400599854",
     "organizer": "인천관광재단",
-    "isFree": false,
-    "id": "13"
+    "isFree": false
   },
   {
+    "id": "2",
+    "slug": "2026년-1883인천-짜장면축제",
     "title": "2026년 1883인천 짜장면축제",
     "startDate": "2026-10-03",
     "endDate": "2026-10-04",
@@ -221,7 +236,6 @@
     "sourceUrl": "https://itour.incheon.go.kr/ssst/ssst/detail.do?cotId=ITD25092616174791248",
     "imageUrl": "https://itour.incheon.go.kr/common/viewImg.do?imgId=DBM26051817380729027",
     "organizer": "인천관광재단",
-    "isFree": false,
-    "id": "2"
+    "isFree": false
   }
 ]
