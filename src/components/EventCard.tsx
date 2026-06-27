@@ -4,6 +4,10 @@ import Link from 'next/link';
 import { useState } from 'react';
 import { Event } from '@/types/event';
 
+function localSrc(url: string) {
+  return url.startsWith('/') ? `${process.env.NEXT_PUBLIC_BASE_PATH ?? ''}${url}` : url;
+}
+
 const CATEGORY_GRADIENTS: Record<string, string> = {
   '축제': 'linear-gradient(135deg, #f97316, #ec4899)',
   '문화/공연': 'linear-gradient(135deg, #8b5cf6, #3b82f6)',
@@ -77,7 +81,7 @@ export default function EventCard({ event, isPast = false }: Props) {
         {event.imageUrl && !imgError ? (
           <>
             <Image
-              src={event.imageUrl}
+              src={localSrc(event.imageUrl)}
               alt={event.title}
               fill
               className="object-cover group-hover:scale-105 transition-transform duration-300"

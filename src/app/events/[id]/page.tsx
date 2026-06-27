@@ -1,8 +1,11 @@
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
-import Image from 'next/image';
 import eventsData from '@/data/events.json';
 import { Event } from '@/types/event';
+
+function localSrc(url: string) {
+  return url.startsWith('/') ? `${process.env.NEXT_PUBLIC_BASE_PATH ?? ''}${url}` : url;
+}
 
 const CATEGORY_GRADIENTS: Record<string, string> = {
   '축제': 'linear-gradient(135deg, #f97316, #ec4899)',
@@ -65,7 +68,7 @@ export default async function EventDetailPage({ params }: { params: Promise<{ id
   const icon = CATEGORY_ICONS[event.category] ?? '📌';
 
   return (
-    <main className="max-w-2xl mx-auto px-4 pb-16 pt-8">
+    <main className="max-w-3xl mx-auto px-4 pb-16 pt-8">
       {/* 뒤로가기 */}
       <Link
         href="/"
@@ -78,39 +81,15 @@ export default async function EventDetailPage({ params }: { params: Promise<{ id
         목록으로
       </Link>
 
-      {/* 이미지 */}
-      <div
-        className="relative w-full rounded-2xl overflow-hidden mb-6"
-        style={{ aspectRatio: '16/9' }}
-      >
-        {event.imageUrl ? (
-          <Image
-            src={event.imageUrl}
-            alt={event.title}
-            fill
-            className="object-cover"
-            unoptimized
-          />
-        ) : (
-          <div
-            className="w-full h-full flex flex-col items-center justify-center gap-3"
-            style={{ background: gradient }}
-          >
-            <span className="text-6xl">{icon}</span>
-            <span className="text-white font-bold text-lg opacity-80">{event.category}</span>
-          </div>
-        )}
-      </div>
-
-      {/* 헤더 */}
-      <div className="mb-6">
+      {/* 정보 */}
+      <div className="mb-8">
         <p className="text-sm mb-1" style={{ color: 'var(--text-dim)' }}>{event.organizer}</p>
         <h1 className="text-2xl font-bold leading-snug mb-3" style={{ color: 'var(--text)' }}>
           {event.title}
         </h1>
 
         {/* 뱃지 */}
-        <div className="flex flex-wrap gap-1.5 mb-4">
+        <div className="flex flex-wrap gap-1.5 mb-5">
           {event.isFree && (
             <span
               className="text-xs px-2.5 py-0.5 rounded-full font-medium"
@@ -135,52 +114,71 @@ export default async function EventDetailPage({ params }: { params: Promise<{ id
             </span>
           ))}
         </div>
-      </div>
 
-      {/* 상세 정보 */}
-      <div
-        className="rounded-xl p-5 mb-6 flex flex-col gap-3"
-        style={{ background: 'var(--bg-card)', border: '1px solid var(--border)' }}
-      >
-        <div className="flex gap-3 text-sm">
-          <span style={{ color: 'var(--text-dim)' }}>📅 일정</span>
-          <span style={{ color: 'var(--text)' }}>{formatDateRange(event.startDate, event.endDate)}</span>
-        </div>
-        <div className="flex gap-3 text-sm">
-          <span style={{ color: 'var(--text-dim)' }}>📍 장소</span>
-          <span style={{ color: 'var(--text)' }}>{event.location}</span>
-        </div>
-        {event.district && (
+        {/* 상세 정보 */}
+        <div
+          className="rounded-xl p-4 mb-5 flex flex-col gap-3"
+          style={{ background: 'var(--bg-card)', border: '1px solid var(--border)' }}
+        >
           <div className="flex gap-3 text-sm">
-            <span style={{ color: 'var(--text-dim)' }}>🏙️ 지역</span>
-            <span style={{ color: 'var(--text)' }}>{event.district}</span>
+            <span style={{ color: 'var(--text-dim)' }}>📅 일정</span>
+            <span style={{ color: 'var(--text)' }}>{formatDateRange(event.startDate, event.endDate)}</span>
           </div>
+          <div className="flex gap-3 text-sm">
+            <span style={{ color: 'var(--text-dim)' }}>📍 장소</span>
+            <span style={{ color: 'var(--text)' }}>{event.location}</span>
+          </div>
+          {event.district && (
+            <div className="flex gap-3 text-sm">
+              <span style={{ color: 'var(--text-dim)' }}>🏙️ 지역</span>
+              <span style={{ color: 'var(--text)' }}>{event.district}</span>
+            </div>
+          )}
+        </div>
+
+        {/* 설명 */}
+        {event.description && (
+          <p className="text-sm leading-relaxed mb-5" style={{ color: 'var(--text-muted)' }}>
+            {event.description}
+          </p>
+        )}
+
+        {/* 공식 페이지 링크 */}
+        {event.sourceUrl && (
+          <a
+            href={event.sourceUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center justify-center gap-2 w-full py-3 rounded-xl text-sm font-medium transition-opacity hover:opacity-80"
+            style={{ background: 'var(--accent)', color: '#fff' }}
+          >
+            공식 페이지 바로가기
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+              <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+              <polyline points="15 3 21 3 21 9" />
+              <line x1="10" y1="14" x2="21" y2="3" />
+            </svg>
+          </a>
         )}
       </div>
 
-      {/* 설명 */}
-      {event.description && (
-        <p className="text-sm leading-relaxed mb-6" style={{ color: 'var(--text-muted)' }}>
-          {event.description}
-        </p>
-      )}
-
-      {/* 공식 페이지 링크 */}
-      {event.sourceUrl && (
-        <a
-          href={event.sourceUrl}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="flex items-center justify-center gap-2 w-full py-3 rounded-xl text-sm font-medium transition-opacity hover:opacity-80"
-          style={{ background: 'var(--accent)', color: '#fff' }}
+      {/* 이미지 포스터 (하단, 크게) */}
+      {event.imageUrl ? (
+        // eslint-disable-next-line @next/next/no-img-element
+        <img
+          src={localSrc(event.imageUrl)}
+          alt={event.title}
+          className="w-full rounded-2xl"
+          style={{ height: 'auto' }}
+        />
+      ) : (
+        <div
+          className="w-full rounded-2xl flex flex-col items-center justify-center gap-3"
+          style={{ background: gradient, aspectRatio: '3/4' }}
         >
-          공식 페이지 바로가기
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-            <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
-            <polyline points="15 3 21 3 21 9" />
-            <line x1="10" y1="14" x2="21" y2="3" />
-          </svg>
-        </a>
+          <span className="text-6xl">{icon}</span>
+          <span className="text-white font-bold text-lg opacity-80">{event.category}</span>
+        </div>
       )}
     </main>
   );

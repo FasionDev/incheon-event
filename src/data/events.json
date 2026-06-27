@@ -133,7 +133,7 @@
     "startDate": "2026-07-07",
     "endDate": "2026-07-07",
     "location": "상상플랫폼 (월미로 33)",
-    "district": "중구",
+    "district": null,
     "category": "문화/공연",
     "tags": [
       "오프라인",
@@ -141,7 +141,8 @@
     ],
     "organizer": "인천시",
     "isFree": true,
-    "description": "제물포구 비전선포식 및 축하공연 (김연자, 장민호, 오유오, 양지)"
+    "description": null,
+    "imageUrl": "/images/events/14.jpg"
   },
   {
     "title": "인천펜타포트 락 페스티벌",
