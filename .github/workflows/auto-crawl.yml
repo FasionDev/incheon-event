@@ -24,6 +24,8 @@ jobs:
 
       - name: 크롤링 실행
         run: npm run crawl:auto
+        env:
+          TOUR_API_KEY: ${{ secrets.TOUR_API_KEY }}
 
       - name: 변경사항 확인 및 커밋
         run: |

@@ -2,8 +2,20 @@
  * 인천관광재단(인천투어) 축제·공연·전시 크롤러
  * https://itour.incheon.go.kr/ssst/ssst/list.do?pageNm=fstv
  *
- * 이 사이트는 JS 기반 페이지네이션을 사용합니다.
- * form POST 방식으로 각 페이지를 가져옵니다.
+ * 실제 HTML 구조 (POST 응답):
+ *   <li class="item_fstv">
+ *     <div class="photo">
+ *       <div class="f_icon"><span class="fest">축제</span></div>
+ *       <img src="/common/viewImg.do?imgId=..." alt="제목">
+ *     </div>
+ *     <div class="subject">
+ *       <a name="btn_detail" cotId="APD..." class="link">제목</a>
+ *     </div>
+ *     <div class="date">2026.10.02 ~2026.10.04</div>
+ *     <div class="buttons">
+ *       <button name="btn_share" cotId="..." imgsrc="/common/viewImg.do?imgId=...">
+ *     </div>
+ *   </li>
  */
 const axios = require('axios');
 const cheerio = require('cheerio');
@@ -27,37 +39,34 @@ async function crawlPage(pageIndex) {
   const $ = cheerio.load(res.data);
   const events = [];
 
-  // 행사 카드 목록 순회 (선택자는 사이트 구조에 따라 조정 필요)
-  $('ul.event-list > li, ul.list > li, .content-list > li').each((_, el) => {
+  $('li.item_fstv').each((_, el) => {
     const $el = $(el);
 
     const $link = $el.find('a[name="btn_detail"]');
     const title = $link.text().trim();
-    const cotId = $link.attr('cotid') || $link.attr('cotId');
+    const cotId = $link.attr('cotId') || $link.attr('cotid');
     if (!title || !cotId) return;
 
-    // 날짜 텍스트: "2026.10.03 ~2026.10.04"
-    const dateRaw = $el.text().match(/\d{4}\.\d{2}\.\d{2}\s*~\s*\d{4}\.\d{2}\.\d{2}/);
+    // 날짜: "2026.10.02 ~2026.10.04"
+    const dateRaw = $el.find('div.date').text().trim();
     if (!dateRaw) return;
-    const { startDate, endDate } = parseDateRange(dateRaw[0]);
+    const { startDate, endDate } = parseDateRange(dateRaw);
 
-    // 카테고리 텍스트 (축제/공연/전시 등)
-    const categoryRaw = $el.find('span, em, .category').first().text().trim();
+    // 카테고리 (축제/공연/전시 등)
+    const categoryRaw = $el.find('div.f_icon span').first().text().trim();
 
-    // 이미지 (btn_share의 imgsrc 속성 또는 img 태그)
-    const $share = $el.find('button[name="btn_share"]');
-    const imgSrc = $share.attr('imgsrc') || $el.find('img').attr('src') || '';
-    const imageUrl = imgSrc ? (imgSrc.startsWith('http') ? imgSrc : `${BASE_URL}${imgSrc}`) : undefined;
-
-    // 장소
-    const location = $el.find('.place, .location').text().trim() || '인천';
+    // 이미지: div.photo img (src는 상대경로)
+    const imgSrc = $el.find('div.photo img').attr('src') || '';
+    const imageUrl = imgSrc
+      ? (imgSrc.startsWith('http') ? imgSrc : `${BASE_URL}${imgSrc}`)
+      : undefined;
 
     events.push({
       title,
       startDate,
       endDate,
-      location,
-      district: inferDistrict(location),
+      location: '인천',
+      district: '',
       category: normalizeCategory(categoryRaw || title),
       tags: ['오프라인'],
       sourceUrl: `${BASE_URL}/ssst/ssst/detail.do?cotId=${cotId}`,
@@ -81,9 +90,8 @@ async function crawlAll() {
     console.log(`  페이지 ${page} 수집 중...`);
     const items = await crawlPage(page);
 
-    if (items.length === 0 || page > 10) break;
+    if (items.length === 0 || page > 15) break;
 
-    // 새 항목이 하나도 없으면 페이지네이션이 반복된 것 → 중단
     const newItems = items.filter((e) => {
       const key = e.title + e.startDate;
       if (seenKeys.has(key)) return false;
