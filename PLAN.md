@@ -229,6 +229,5 @@ async function isValidEventThumbnail(imageUrl, eventTitle) {
 | slug 기반 URL 적용 (SEO 강화) | ✅ 완료 |
 | 행사 데이터 확충 (50개 이상 목표) | ⬜ 예정 |
 | 크롤러 선택자 수정 (ifac, itour) | ✅ 완료 |
-| 한국관광공사 API 크롤러 추가 | ✅ 완료 (TOUR_API_KEY 시크릿 등록 필요) |
 | GitHub Actions 자동 크롤링 (매일 00:00 KST) | ✅ 완료 |
 | AI 이미지 검증 (GitHub Models) | ⬜ 예정 (7단계) |

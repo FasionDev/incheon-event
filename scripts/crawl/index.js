@@ -9,7 +9,6 @@ const fs = require('fs');
 const path = require('path');
 const { crawlAll: crawlIfac } = require('./ifac');
 const { crawlAll: crawlItour } = require('./itour');
-const { crawlAll: crawlTour } = require('./tour');
 
 const EVENTS_PATH = path.join(__dirname, '../../src/data/events.json');
 
@@ -28,15 +27,14 @@ async function main() {
   const existing = JSON.parse(fs.readFileSync(EVENTS_PATH, 'utf-8'));
   console.log(`기존 행사 수: ${existing.length}개\n`);
 
-  const [ifacEvents, itourEvents, tourEvents] = await Promise.all([
+  const [ifacEvents, itourEvents] = await Promise.all([
     crawlIfac().catch((e) => { console.error('[ifac 오류]', e.message); return []; }),
     crawlItour().catch((e) => { console.error('[itour 오류]', e.message); return []; }),
-    crawlTour().catch((e) => { console.error('[tour 오류]', e.message); return []; }),
   ]);
 
   // 크롤링 결과 내부 중복 제거
   const seen = new Set();
-  const crawled = [...ifacEvents, ...itourEvents, ...tourEvents].filter((e) => {
+  const crawled = [...ifacEvents, ...itourEvents].filter((e) => {
     const key = e.title + e.startDate;
     if (seen.has(key)) return false;
     seen.add(key);
