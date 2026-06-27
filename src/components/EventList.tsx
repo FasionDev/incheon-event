@@ -5,15 +5,24 @@ import { Event, EventCategory } from '@/types/event';
 import EventCard from './EventCard';
 import FilterBar from './FilterBar';
 
+type Tab = 'upcoming' | 'ended' | 'all';
+
+const TABS: { value: Tab; label: string }[] = [
+  { value: 'upcoming', label: '진행 예정' },
+  { value: 'ended', label: '종료됨' },
+  { value: 'all', label: '전체' },
+];
+
 interface MonthGroup {
   label: string;
   events: Event[];
 }
 
-function groupByMonth(events: Event[]): MonthGroup[] {
-  const sorted = [...events].sort(
-    (a, b) => new Date(a.startDate).getTime() - new Date(b.startDate).getTime()
-  );
+function groupByMonth(events: Event[], descending = false): MonthGroup[] {
+  const sorted = [...events].sort((a, b) => {
+    const diff = new Date(a.startDate).getTime() - new Date(b.startDate).getTime();
+    return descending ? -diff : diff;
+  });
 
   const map = new Map<string, Event[]>();
   for (const e of sorted) {
@@ -31,18 +40,27 @@ interface Props {
 }
 
 export default function EventList({ events }: Props) {
+  const [tab, setTab] = useState<Tab>('upcoming');
   const [selectedCategory, setSelectedCategory] = useState<EventCategory | 'all'>('all');
   const [showFreeOnly, setShowFreeOnly] = useState(false);
   const [search, setSearch] = useState('');
 
+  const today = useMemo(() => {
+    const d = new Date();
+    d.setHours(0, 0, 0, 0);
+    return d;
+  }, []);
+
   const filtered = useMemo(() => {
-    const today = new Date();
-    today.setHours(0, 0, 0, 0);
     const twoMonthsAgo = new Date(today);
     twoMonthsAgo.setDate(twoMonthsAgo.getDate() - 60);
 
     return events.filter((e) => {
-      if (new Date(e.endDate) < twoMonthsAgo) return false;
+      const end = new Date(e.endDate);
+      if (tab === 'upcoming' && end < today) return false;
+      if (tab === 'ended' && end >= today) return false;
+      if (tab === 'ended' && end < twoMonthsAgo) return false;
+      if (tab === 'all' && end < twoMonthsAgo) return false;
       if (selectedCategory !== 'all' && e.category !== selectedCategory) return false;
       if (showFreeOnly && !e.isFree) return false;
       if (
@@ -54,14 +72,38 @@ export default function EventList({ events }: Props) {
         return false;
       return true;
     });
-  }, [events, selectedCategory, showFreeOnly, search]);
+  }, [events, tab, selectedCategory, showFreeOnly, search, today]);
 
-  const grouped = useMemo(() => groupByMonth(filtered), [filtered]);
+  const grouped = useMemo(
+    () => groupByMonth(filtered, tab === 'ended'),
+    [filtered, tab]
+  );
 
   return (
     <div>
+      {/* Tabs */}
+      <div
+        className="flex mt-6 rounded-xl p-1 gap-1"
+        style={{ background: 'var(--bg-card)', border: '1px solid var(--border)' }}
+      >
+        {TABS.map(({ value, label }) => (
+          <button
+            key={value}
+            onClick={() => setTab(value)}
+            className="flex-1 py-2 rounded-lg text-sm font-semibold transition-all"
+            style={
+              tab === value
+                ? { background: 'var(--accent)', color: '#fff' }
+                : { color: 'var(--text-muted)' }
+            }
+          >
+            {label}
+          </button>
+        ))}
+      </div>
+
       {/* Search */}
-      <div className="relative mb-0 mt-5">
+      <div className="relative mb-0 mt-4">
         <span className="absolute left-3.5 top-1/2 -translate-y-1/2 text-sm" style={{ color: 'var(--text-dim)' }}>
           🔍
         </span>
@@ -106,8 +148,6 @@ export default function EventList({ events }: Props) {
             </h3>
             <div>
               {events.map((event) => {
-                const today = new Date();
-                today.setHours(0, 0, 0, 0);
                 const isPast = new Date(event.endDate) < today;
                 return <EventCard key={event.id} event={event} isPast={isPast} />;
               })}
