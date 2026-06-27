@@ -1,5 +1,6 @@
 'use client';
 import Image from 'next/image';
+import Link from 'next/link';
 import { useState } from 'react';
 import { Event } from '@/types/event';
 
@@ -63,14 +64,11 @@ export default function EventCard({ event, isPast = false }: Props) {
   const gradient = CATEGORY_GRADIENTS[event.category] ?? CATEGORY_GRADIENTS['기타'];
   const icon = CATEGORY_ICONS[event.category] ?? '📌';
 
-  return (
-    <a
-      href={event.sourceUrl}
-      target="_blank"
-      rel="noopener noreferrer"
-      className="group flex gap-5 py-6"
-      style={{ borderBottom: '1px solid var(--border)', opacity: isPast ? 0.5 : 1 }}
-    >
+  const sharedClassName = "group flex gap-5 py-6";
+  const sharedStyle = { borderBottom: '1px solid var(--border)', opacity: isPast ? 0.5 : 1 };
+
+  const content = (
+    <>
       {/* Thumbnail */}
       <div
         className="relative flex-shrink-0 rounded-xl overflow-hidden"
@@ -139,9 +137,11 @@ export default function EventCard({ event, isPast = false }: Props) {
           >
             {event.title}
           </h2>
-          <p className="text-sm line-clamp-2 mb-3" style={{ color: 'var(--text-muted)' }}>
-            {event.description}
-          </p>
+          {event.description && (
+            <p className="text-sm line-clamp-2 mb-3" style={{ color: 'var(--text-muted)' }}>
+              {event.description}
+            </p>
+          )}
         </div>
 
         <div>
@@ -171,6 +171,26 @@ export default function EventCard({ event, isPast = false }: Props) {
           </div>
         </div>
       </div>
-    </a>
+    </>
+  );
+
+  if (event.sourceUrl) {
+    return (
+      <a
+        href={event.sourceUrl}
+        target="_blank"
+        rel="noopener noreferrer"
+        className={sharedClassName}
+        style={sharedStyle}
+      >
+        {content}
+      </a>
+    );
+  }
+
+  return (
+    <Link href={`/events/${event.id}`} className={sharedClassName} style={sharedStyle}>
+      {content}
+    </Link>
   );
 }

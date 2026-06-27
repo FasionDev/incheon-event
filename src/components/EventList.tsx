@@ -48,7 +48,7 @@ export default function EventList({ events }: Props) {
       if (
         search &&
         !e.title.includes(search) &&
-        !e.description.includes(search) &&
+        !(e.description ?? '').includes(search) &&
         !e.tags.some((t) => t.includes(search))
       )
         return false;

@@ -11,14 +11,14 @@ export type EventCategory =
 export interface Event {
   id: string;
   title: string;
-  description: string;
+  description?: string;
   startDate: string;
   endDate: string;
   location: string;
   district: string;
   category: EventCategory;
   tags: string[];
-  sourceUrl: string;
+  sourceUrl?: string;
   imageUrl?: string;
   organizer: string;
   isFree: boolean;
