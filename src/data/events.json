@@ -1,7 +1,7 @@
 [
   {
     "id": "11",
-    "slug": "2026-생물사랑-어린이-축제",
+    "slug": "2026-saengmulsarang-childrens-festival",
     "title": "2026 생물사랑 어린이 축제",
     "startDate": "2026-05-05",
     "endDate": "2026-05-05",
@@ -18,7 +18,7 @@
   },
   {
     "id": "12",
-    "slug": "가족의달-어린이-축제",
+    "slug": "family-month-childrens-festival",
     "title": "가족의 달 어린이 축제",
     "startDate": "2026-05-05",
     "endDate": "2026-05-05",
@@ -35,7 +35,7 @@
   },
   {
     "id": "8",
-    "slug": "제14회-디아스포라영화제",
+    "slug": "14th-diaspora-film-festival",
     "title": "제14회 디아스포라영화제",
     "startDate": "2026-05-22",
     "endDate": "2026-05-26",
@@ -52,7 +52,7 @@
   },
   {
     "id": "10",
-    "slug": "2026-찾아가는-문화공연-요기조기-데이",
+    "slug": "2026-yogijogi-cultural-performance",
     "title": "2026 찾아가는 문화공연 <요기조기 데이>",
     "startDate": "2026-05-23",
     "endDate": "2026-05-23",
@@ -69,7 +69,7 @@
   },
   {
     "id": "9",
-    "slug": "2026-인천-스카이하운즈-도그스포츠-페스티벌",
+    "slug": "2026-incheon-skyhounds-dog-sports-festival",
     "title": "2026 인천 스카이하운즈 도그스포츠 페스티벌",
     "startDate": "2026-05-24",
     "endDate": "2026-05-24",
@@ -86,7 +86,7 @@
   },
   {
     "id": "6",
-    "slug": "2026-인천낚시박람회",
+    "slug": "2026-incheon-fishing-expo",
     "title": "2026 인천낚시박람회",
     "startDate": "2026-05-29",
     "endDate": "2026-05-31",
@@ -103,7 +103,7 @@
   },
   {
     "id": "5",
-    "slug": "오슬로우-빈티지-마켓",
+    "slug": "oslo-vintage-market",
     "title": "오슬로우 빈티지 마켓",
     "startDate": "2026-05-30",
     "endDate": "2026-05-31",
@@ -120,7 +120,7 @@
   },
   {
     "id": "7",
-    "slug": "국립인천해양박물관-바다의날-바다네컷-그리기-대회",
+    "slug": "incheon-maritime-museum-ocean-day-drawing-contest",
     "title": "[국립인천해양박물관] 바다의 날 기념 제 1회 바다네컷 그리기 대회",
     "startDate": "2026-05-30",
     "endDate": "2026-05-30",
@@ -137,7 +137,7 @@
   },
   {
     "id": "14",
-    "slug": "제물포구-출범-경축행사",
+    "slug": "jemulpogoo-launch-ceremony",
     "title": "제물포구 출범 경축행사",
     "startDate": "2026-07-07",
     "endDate": "2026-07-07",
@@ -155,7 +155,7 @@
   },
   {
     "id": "4",
-    "slug": "인천펜타포트-락-페스티벌",
+    "slug": "incheon-pentaport-rock-festival",
     "title": "인천펜타포트 락 페스티벌",
     "startDate": "2026-07-31",
     "endDate": "2026-08-02",
@@ -172,7 +172,7 @@
   },
   {
     "id": "1",
-    "slug": "국가유산-미디어아트",
+    "slug": "national-heritage-media-art",
     "title": "국가유산 미디어아트",
     "startDate": "2026-08-14",
     "endDate": "2026-10-18",
@@ -189,7 +189,7 @@
   },
   {
     "id": "3",
-    "slug": "부평풍물대축제",
+    "slug": "bupyeong-folk-music-festival",
     "title": "부평풍물대축제",
     "startDate": "2026-10-02",
     "endDate": "2026-10-04",
@@ -206,7 +206,7 @@
   },
   {
     "id": "13",
-    "slug": "소래포구축제",
+    "slug": "sorae-pogu-festival",
     "title": "소래포구축제",
     "startDate": "2026-10-02",
     "endDate": "2026-10-04",
@@ -223,7 +223,7 @@
   },
   {
     "id": "2",
-    "slug": "2026년-1883인천-짜장면축제",
+    "slug": "2026-1883-incheon-jjajangmyeon-festival",
     "title": "2026년 1883인천 짜장면축제",
     "startDate": "2026-10-03",
     "endDate": "2026-10-04",
