@@ -10,7 +10,6 @@ export type EventCategory =
 
 export interface Event {
   id: string;
-  slug: string;
   title: string;
   description?: string;
   startDate: string;

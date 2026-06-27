@@ -179,7 +179,7 @@ export default function EventCard({ event, isPast = false }: Props) {
   );
 
   return (
-    <Link href={`/events/${event.slug}`} className={sharedClassName} style={sharedStyle}>
+    <Link href={`/events/${event.id}`} className={sharedClassName} style={sharedStyle}>
       {content}
     </Link>
   );

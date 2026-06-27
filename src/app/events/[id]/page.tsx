@@ -46,12 +46,12 @@ function formatDateRange(start: string, end: string): string {
 }
 
 export function generateStaticParams() {
-  return (eventsData as Event[]).map((e) => ({ slug: e.slug }));
+  return (eventsData as Event[]).map((e) => ({ id: e.id }));
 }
 
-export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }) {
-  const { slug } = await params;
-  const event = (eventsData as Event[]).find((e) => e.slug === slug);
+export async function generateMetadata({ params }: { params: Promise<{ id: string }> }) {
+  const { id } = await params;
+  const event = (eventsData as Event[]).find((e) => e.id === id);
   if (!event) return {};
   return {
     title: `${event.title} | 인천이벤트`,
@@ -59,9 +59,9 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   };
 }
 
-export default async function EventDetailPage({ params }: { params: Promise<{ slug: string }> }) {
-  const { slug } = await params;
-  const event = (eventsData as Event[]).find((e) => e.slug === slug);
+export default async function EventDetailPage({ params }: { params: Promise<{ id: string }> }) {
+  const { id } = await params;
+  const event = (eventsData as Event[]).find((e) => e.id === id);
   if (!event) notFound();
 
   const gradient = CATEGORY_GRADIENTS[event.category] ?? CATEGORY_GRADIENTS['기타'];
