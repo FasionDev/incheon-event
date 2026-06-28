@@ -223,5 +223,39 @@
     "imageUrl": "https://itour.incheon.go.kr/common/viewImg.do?imgId=DBM26051817380729027",
     "organizer": "인천관광재단",
     "isFree": false
+  },
+  {
+    "id": "15",
+    "title": "[국립인천해양박물관X인천문화재단] 해양문화예술교육 <I'M 바다예술가>",
+    "startDate": "2026-06-23",
+    "endDate": "2026-08-29",
+    "location": "국립인천해양박물관",
+    "district": "",
+    "category": "교육",
+    "tags": [
+      "문화",
+      "오프라인"
+    ],
+    "sourceUrl": "https://ifac.or.kr/culturalInfo/cuturalEvents/performanceSrch/view.do?key=m2501152621396&eventSn=13646",
+    "imageUrl": "https://ifac.or.kr/common/image.do?key=225204",
+    "organizer": "국립인천해양박물관",
+    "isFree": false
+  },
+  {
+    "id": "16",
+    "title": "2026년 수봉 ART:LAB - AI부터 사진, 어반스케치까지! 나도 아트 크리에이터!",
+    "startDate": "2026-07-18",
+    "endDate": "2026-11-26",
+    "location": "인천수봉문화회관",
+    "district": "",
+    "category": "기타",
+    "tags": [
+      "문화",
+      "오프라인"
+    ],
+    "sourceUrl": "https://ifac.or.kr/culturalInfo/cuturalEvents/performanceSrch/view.do?key=m2501152621396&eventSn=13672",
+    "imageUrl": "https://ifac.or.kr/common/image.do?key=225775",
+    "organizer": "인천수봉문화회관",
+    "isFree": false
   }
 ]
