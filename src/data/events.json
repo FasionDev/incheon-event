@@ -242,6 +242,23 @@
     "isFree": false
   },
   {
+    "id": "17",
+    "title": "트라이보울 360 - OPUS 오푸스",
+    "startDate": "2026-07-18",
+    "endDate": "2026-07-18",
+    "location": "트라이보울",
+    "district": "",
+    "category": "공연",
+    "tags": [
+      "문화",
+      "오프라인"
+    ],
+    "sourceUrl": "https://www.tribowl.kr/_NBoard/board.php?bo_table=showProgram&wr_id=683",
+    "imageUrl": "https://www.tribowl.kr/data/file/showProgram/9e4193b4e6a554f85d8dc1c822a19a20_4dNzFRYZ_ae939bbceea132dc53f22f444b41b93439c9bf7f.jpg",
+    "organizer": "트라이보울",
+    "isFree": false
+  },
+  {
     "id": "16",
     "title": "2026년 수봉 ART:LAB - AI부터 사진, 어반스케치까지! 나도 아트 크리에이터!",
     "startDate": "2026-07-18",
