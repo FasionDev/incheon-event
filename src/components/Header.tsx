@@ -5,7 +5,7 @@ import { useTheme } from 'next-themes';
 import { useEffect, useState } from 'react';
 
 const GITHUB_ISSUE_URL =
-  'https://github.com/Chung10kr/inchecon-event/issues/new?template=event-request.md&title=%5B%EC%9D%B4%EB%B2%A4%ED%8A%B8+%EB%93%B1%EB%A1%9D%5D&labels=event-request';
+  'https://github.com/FasionDev/incheon-event/issues/new?template=event-request.md&title=%5B%EC%9D%B4%EB%B2%A4%ED%8A%B8+%EB%93%B1%EB%A1%9D%5D&labels=event-request';
 
 function ThemeToggle() {
   const { theme, setTheme } = useTheme();
