@@ -242,6 +242,23 @@
     "isFree": false
   },
   {
+    "id": "18",
+    "title": "2026년 문화행사 함께海요 《여름바다 북캉스》",
+    "startDate": "2026-07-25",
+    "endDate": "2026-07-25",
+    "location": "국립인천해양박물관 2층 로비",
+    "district": "",
+    "category": "문화/공연",
+    "tags": [
+      "문화",
+      "오프라인"
+    ],
+    "sourceUrl": "https://www.inmm.or.kr/ko/place/cultureEvent/view.do?menuSeq=8515&placeSeq=150",
+    "imageUrl": "https://ifac.or.kr/common/image.do?key=225921",
+    "organizer": "국립인천해양박물관",
+    "isFree": true
+  },
+  {
     "id": "17",
     "title": "트라이보울 360 - OPUS 오푸스",
     "startDate": "2026-07-18",
