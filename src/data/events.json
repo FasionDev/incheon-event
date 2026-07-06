@@ -1,5 +1,21 @@
 [
   {
+    "id": "19",
+    "title": "KBS 전국노래자랑 인천 제물포구편",
+    "startDate": "2026-08-04",
+    "endDate": "2026-08-04",
+    "location": "상상플랫폼 웨이브홀",
+    "district": "",
+    "category": "공연",
+    "tags": [
+      "오프라인",
+      "공연"
+    ],
+    "imageUrl": "https://www.kookjeilbo.com/data/photos/yhnews/202607/RPR20260706004700353_01_i.jpg",
+    "organizer": "제물포구",
+    "isFree": true
+  },
+  {
     "id": "11",
     "title": "2026 생물사랑 어린이 축제",
     "startDate": "2026-05-05",
