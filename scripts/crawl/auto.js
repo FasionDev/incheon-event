@@ -110,9 +110,10 @@ async function main() {
   }
 
   // ID 부여
+  const baseId = parseInt(generateId(existing), 10);
   const newEvents = candidates.map((item, i) => ({
     ...item,
-    id: generateId([...existing, ...candidates.slice(0, i)]),
+    id: String(baseId + i),
   }));
 
   console.log(`\n✅ 신규 행사 ${newEvents.length}개:`);
