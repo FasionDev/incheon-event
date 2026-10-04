@@ -1,21 +1,5 @@
 [
   {
-    "id": "19",
-    "title": "KBS 전국노래자랑 인천 제물포구편",
-    "startDate": "2026-08-04",
-    "endDate": "2026-08-04",
-    "location": "상상플랫폼 웨이브홀",
-    "district": "",
-    "category": "공연",
-    "tags": [
-      "오프라인",
-      "공연"
-    ],
-    "imageUrl": "https://www.kookjeilbo.com/data/photos/yhnews/202607/RPR20260706004700353_01_i.jpg",
-    "organizer": "제물포구",
-    "isFree": true
-  },
-  {
     "id": "11",
     "title": "2026 생물사랑 어린이 축제",
     "startDate": "2026-05-05",
@@ -144,103 +128,6 @@
     "isFree": false
   },
   {
-    "id": "14",
-    "title": "제물포구 출범 경축행사",
-    "startDate": "2026-07-07",
-    "endDate": "2026-07-07",
-    "location": "상상플랫폼 (월미로 33)",
-    "district": "",
-    "category": "문화/공연",
-    "tags": [
-      "오프라인",
-      "공연"
-    ],
-    "organizer": "인천시",
-    "isFree": true,
-    "description": null,
-    "imageUrl": "/images/events/14.jpg"
-  },
-  {
-    "id": "4",
-    "title": "인천펜타포트 락 페스티벌",
-    "startDate": "2026-07-31",
-    "endDate": "2026-08-02",
-    "location": "인천",
-    "district": "",
-    "category": "축제",
-    "tags": [
-      "오프라인"
-    ],
-    "sourceUrl": "https://itour.incheon.go.kr/ssst/ssst/detail.do?cotId=APD21112609184717505",
-    "imageUrl": "https://itour.incheon.go.kr/common/viewImg.do?imgId=API26060304401518642",
-    "organizer": "인천관광재단",
-    "isFree": false
-  },
-  {
-    "id": "1",
-    "title": "국가유산 미디어아트",
-    "startDate": "2026-08-14",
-    "endDate": "2026-10-18",
-    "location": "인천",
-    "district": "",
-    "category": "축제",
-    "tags": [
-      "오프라인"
-    ],
-    "sourceUrl": "https://itour.incheon.go.kr/ssst/ssst/detail.do?cotId=APD26040304404171613",
-    "imageUrl": "https://itour.incheon.go.kr/common/viewImg.do?imgId=API26040304404174873",
-    "organizer": "인천관광재단",
-    "isFree": false
-  },
-  {
-    "id": "3",
-    "title": "부평풍물대축제",
-    "startDate": "2026-10-02",
-    "endDate": "2026-10-04",
-    "location": "인천",
-    "district": "",
-    "category": "축제",
-    "tags": [
-      "오프라인"
-    ],
-    "sourceUrl": "https://itour.incheon.go.kr/ssst/ssst/detail.do?cotId=APD21112609174959336",
-    "imageUrl": "https://itour.incheon.go.kr/common/viewImg.do?imgId=API26052704402881027",
-    "organizer": "인천관광재단",
-    "isFree": false
-  },
-  {
-    "id": "13",
-    "title": "소래포구축제",
-    "startDate": "2026-10-02",
-    "endDate": "2026-10-04",
-    "location": "인천",
-    "district": "",
-    "category": "축제",
-    "tags": [
-      "오프라인"
-    ],
-    "sourceUrl": "https://itour.incheon.go.kr/ssst/ssst/detail.do?cotId=APD21112609171373617",
-    "imageUrl": "https://itour.incheon.go.kr/common/viewImg.do?imgId=API26061604400599854",
-    "organizer": "인천관광재단",
-    "isFree": false
-  },
-  {
-    "id": "2",
-    "title": "2026년 1883인천 짜장면축제",
-    "startDate": "2026-10-03",
-    "endDate": "2026-10-04",
-    "location": "인천",
-    "district": "",
-    "category": "축제",
-    "tags": [
-      "오프라인"
-    ],
-    "sourceUrl": "https://itour.incheon.go.kr/ssst/ssst/detail.do?cotId=ITD25092616174791248",
-    "imageUrl": "https://itour.incheon.go.kr/common/viewImg.do?imgId=DBM26051817380729027",
-    "organizer": "인천관광재단",
-    "isFree": false
-  },
-  {
     "id": "15",
     "title": "[국립인천해양박물관X인천문화재단] 해양문화예술교육 <I'M 바다예술가>",
     "startDate": "2026-06-23",
@@ -258,21 +145,21 @@
     "isFree": false
   },
   {
-    "id": "18",
-    "title": "2026년 문화행사 함께海요 《여름바다 북캉스》",
-    "startDate": "2026-07-25",
-    "endDate": "2026-07-25",
-    "location": "국립인천해양박물관 2층 로비",
+    "id": "14",
+    "title": "제물포구 출범 경축행사",
+    "startDate": "2026-07-07",
+    "endDate": "2026-07-07",
+    "location": "상상플랫폼 (월미로 33)",
     "district": "",
     "category": "문화/공연",
     "tags": [
-      "문화",
-      "오프라인"
+      "오프라인",
+      "공연"
     ],
-    "sourceUrl": "https://www.inmm.or.kr/ko/place/cultureEvent/view.do?menuSeq=8515&placeSeq=150",
-    "imageUrl": "https://ifac.or.kr/common/image.do?key=225921",
-    "organizer": "국립인천해양박물관",
-    "isFree": true
+    "organizer": "인천시",
+    "isFree": true,
+    "description": null,
+    "imageUrl": "/images/events/14.jpg"
   },
   {
     "id": "17",
@@ -309,6 +196,23 @@
     "isFree": false
   },
   {
+    "id": "18",
+    "title": "2026년 문화행사 함께海요 《여름바다 북캉스》",
+    "startDate": "2026-07-25",
+    "endDate": "2026-07-25",
+    "location": "국립인천해양박물관 2층 로비",
+    "district": "",
+    "category": "문화/공연",
+    "tags": [
+      "문화",
+      "오프라인"
+    ],
+    "sourceUrl": "https://www.inmm.or.kr/ko/place/cultureEvent/view.do?menuSeq=8515&placeSeq=150",
+    "imageUrl": "https://ifac.or.kr/common/image.do?key=225921",
+    "organizer": "국립인천해양박물관",
+    "isFree": true
+  },
+  {
     "id": "20",
     "title": "계양아라온워터축제",
     "startDate": "2026-07-25",
@@ -323,5 +227,341 @@
     "imageUrl": "https://itour.incheon.go.kr/common/viewImg.do?imgId=DBM26071009030755255",
     "organizer": "인천관광재단",
     "isFree": false
+  },
+  {
+    "id": "4",
+    "title": "인천펜타포트 락 페스티벌",
+    "startDate": "2026-07-31",
+    "endDate": "2026-08-02",
+    "location": "인천",
+    "district": "",
+    "category": "축제",
+    "tags": [
+      "오프라인"
+    ],
+    "sourceUrl": "https://itour.incheon.go.kr/ssst/ssst/detail.do?cotId=APD21112609184717505",
+    "imageUrl": "https://itour.incheon.go.kr/common/viewImg.do?imgId=API26060304401518642",
+    "organizer": "인천관광재단",
+    "isFree": false
+  },
+  {
+    "id": "19",
+    "title": "KBS 전국노래자랑 인천 제물포구편",
+    "startDate": "2026-08-04",
+    "endDate": "2026-08-04",
+    "location": "상상플랫폼 웨이브홀",
+    "district": "",
+    "category": "공연",
+    "tags": [
+      "오프라인",
+      "공연"
+    ],
+    "imageUrl": "https://www.kookjeilbo.com/data/photos/yhnews/202607/RPR20260706004700353_01_i.jpg",
+    "organizer": "제물포구",
+    "isFree": true
+  },
+  {
+    "id": "1",
+    "title": "국가유산 미디어아트",
+    "startDate": "2026-08-14",
+    "endDate": "2026-10-18",
+    "location": "인천",
+    "district": "",
+    "category": "축제",
+    "tags": [
+      "오프라인"
+    ],
+    "sourceUrl": "https://itour.incheon.go.kr/ssst/ssst/detail.do?cotId=APD26040304404171613",
+    "imageUrl": "https://itour.incheon.go.kr/common/viewImg.do?imgId=API26040304404174873",
+    "organizer": "인천관광재단",
+    "isFree": false
+  },
+  {
+    "title": "2026 시작공간 일부 청년주간 행사 <틈:아트(Team:ART)>",
+    "startDate": "2026-09-14",
+    "endDate": "2026-10-30",
+    "location": "인천청년문화창작소 시작공간 일부",
+    "district": "",
+    "category": "기타",
+    "tags": [
+      "문화",
+      "오프라인"
+    ],
+    "sourceUrl": "https://ifac.or.kr/culturalInfo/cuturalEvents/performanceSrch/view.do?key=m2501152621396&seq=13808",
+    "organizer": "인천청년문화창작소 시작공간 일부",
+    "isFree": false,
+    "id": "41"
+  },
+  {
+    "title": "지도밖으로 자라는 도시",
+    "startDate": "2026-09-28",
+    "endDate": "2026-10-26",
+    "location": "문아트랩",
+    "district": "",
+    "category": "기타",
+    "tags": [
+      "문화",
+      "오프라인"
+    ],
+    "sourceUrl": "https://ifac.or.kr/culturalInfo/cuturalEvents/performanceSrch/view.do?key=m2501152621396&seq=13838",
+    "organizer": "문아트랩",
+    "isFree": false,
+    "id": "46"
+  },
+  {
+    "id": "3",
+    "title": "부평풍물대축제",
+    "startDate": "2026-10-02",
+    "endDate": "2026-10-04",
+    "location": "인천",
+    "district": "",
+    "category": "축제",
+    "tags": [
+      "오프라인"
+    ],
+    "sourceUrl": "https://itour.incheon.go.kr/ssst/ssst/detail.do?cotId=APD21112609174959336",
+    "imageUrl": "https://itour.incheon.go.kr/common/viewImg.do?imgId=API26052704402881027",
+    "organizer": "인천관광재단",
+    "isFree": false
+  },
+  {
+    "id": "13",
+    "title": "소래포구축제",
+    "startDate": "2026-10-02",
+    "endDate": "2026-10-04",
+    "location": "인천",
+    "district": "",
+    "category": "축제",
+    "tags": [
+      "오프라인"
+    ],
+    "sourceUrl": "https://itour.incheon.go.kr/ssst/ssst/detail.do?cotId=APD21112609171373617",
+    "imageUrl": "https://itour.incheon.go.kr/common/viewImg.do?imgId=API26061604400599854",
+    "organizer": "인천관광재단",
+    "isFree": false
+  },
+  {
+    "title": "제26회 소래포구축제 - 소래에서 놀래",
+    "startDate": "2026-10-02",
+    "endDate": "2026-10-04",
+    "location": "소래포구 일원(해오름광장 및 소래포구 관광벨트)",
+    "district": "남동구",
+    "category": "축제",
+    "tags": [
+      "문화",
+      "오프라인"
+    ],
+    "sourceUrl": "https://ifac.or.kr/culturalInfo/cuturalEvents/performanceSrch/view.do?key=m2501152621396&seq=13782",
+    "organizer": "소래포구 일원(해오름광장 및 소래포구 관광벨트)",
+    "isFree": false,
+    "id": "51"
+  },
+  {
+    "id": "2",
+    "title": "2026년 1883인천 짜장면축제",
+    "startDate": "2026-10-03",
+    "endDate": "2026-10-04",
+    "location": "인천",
+    "district": "",
+    "category": "축제",
+    "tags": [
+      "오프라인"
+    ],
+    "sourceUrl": "https://itour.incheon.go.kr/ssst/ssst/detail.do?cotId=ITD25092616174791248",
+    "imageUrl": "https://itour.incheon.go.kr/common/viewImg.do?imgId=DBM26051817380729027",
+    "organizer": "인천관광재단",
+    "isFree": false
+  },
+  {
+    "title": "삼랑성역사문화축제",
+    "startDate": "2026-10-03",
+    "endDate": "2026-10-11",
+    "location": "인천",
+    "district": "",
+    "category": "축제",
+    "tags": [
+      "오프라인"
+    ],
+    "sourceUrl": "https://itour.incheon.go.kr/ssst/ssst/detail.do?cotId=APD21112609174278560",
+    "imageUrl": "https://itour.incheon.go.kr/common/viewImg.do?imgId=DBM26100110233753866",
+    "organizer": "인천관광재단",
+    "isFree": false,
+    "id": "52"
+  },
+  {
+    "title": "인천 짜장면축제",
+    "startDate": "2026-10-03",
+    "endDate": "2026-10-04",
+    "location": "인천",
+    "district": "",
+    "category": "축제",
+    "tags": [
+      "오프라인"
+    ],
+    "sourceUrl": "https://itour.incheon.go.kr/ssst/ssst/detail.do?cotId=ITD25092616174791248",
+    "imageUrl": "https://itour.incheon.go.kr/common/viewImg.do?imgId=DBM26090417102757948",
+    "organizer": "인천관광재단",
+    "isFree": false,
+    "id": "53"
+  },
+  {
+    "title": "주름진 경계, 맞닿는 몸",
+    "startDate": "2026-10-06",
+    "endDate": "2026-10-11",
+    "location": "인천아트플랫폼 E1",
+    "district": "",
+    "category": "기타",
+    "tags": [
+      "문화",
+      "오프라인"
+    ],
+    "sourceUrl": "https://ifac.or.kr/culturalInfo/cuturalEvents/performanceSrch/view.do?key=m2501152621396&seq=13850",
+    "organizer": "인천아트플랫폼 E1",
+    "isFree": false,
+    "id": "54"
+  },
+  {
+    "title": "인천개항장 국가유산야행",
+    "startDate": "2026-10-09",
+    "endDate": "2026-10-11",
+    "location": "인천",
+    "district": "",
+    "category": "축제",
+    "tags": [
+      "오프라인"
+    ],
+    "sourceUrl": "https://itour.incheon.go.kr/ssst/ssst/detail.do?cotId=APD21112609160427326",
+    "imageUrl": "https://itour.incheon.go.kr/common/viewImg.do?imgId=DBM26090909085626426",
+    "organizer": "인천관광재단",
+    "isFree": false,
+    "id": "58"
+  },
+  {
+    "title": "연수 능허대 문화축제",
+    "startDate": "2026-10-09",
+    "endDate": "2026-10-10",
+    "location": "인천",
+    "district": "",
+    "category": "축제",
+    "tags": [
+      "오프라인"
+    ],
+    "sourceUrl": "https://itour.incheon.go.kr/ssst/ssst/detail.do?cotId=APD22112116202353746",
+    "imageUrl": "https://itour.incheon.go.kr/common/viewImg.do?imgId=API26100204401537020",
+    "organizer": "인천관광재단",
+    "isFree": false,
+    "id": "59"
+  },
+  {
+    "title": "르아또 기획 연주회 '시음회(詩音會)'",
+    "startDate": "2026-10-10",
+    "endDate": "2026-10-10",
+    "location": "부평아트센터 달누리극장(소공연장)",
+    "district": "부평구",
+    "category": "기타",
+    "tags": [
+      "문화",
+      "오프라인"
+    ],
+    "sourceUrl": "https://ifac.or.kr/culturalInfo/cuturalEvents/performanceSrch/view.do?key=m2501152621396&seq=13817",
+    "organizer": "부평아트센터 달누리극장(소공연장)",
+    "isFree": false,
+    "id": "61"
+  },
+  {
+    "title": "[2026 생생국가유산] 개항장 시간을 걷다 - 개항장 1919, 조국을 수호하라",
+    "startDate": "2026-10-10",
+    "endDate": "2026-11-08",
+    "location": "제물포문화원",
+    "district": "",
+    "category": "기타",
+    "tags": [
+      "문화",
+      "오프라인"
+    ],
+    "sourceUrl": "https://ifac.or.kr/culturalInfo/cuturalEvents/performanceSrch/view.do?key=m2501152621396&seq=13847",
+    "organizer": "제물포문화원",
+    "isFree": false,
+    "id": "62"
+  },
+  {
+    "title": "[2026 생생국가유산] 개항장 시간을 걷다 - 출동! 개항장 역사탐험대",
+    "startDate": "2026-10-10",
+    "endDate": "2026-11-08",
+    "location": "제물포문화원",
+    "district": "",
+    "category": "기타",
+    "tags": [
+      "문화",
+      "오프라인"
+    ],
+    "sourceUrl": "https://ifac.or.kr/culturalInfo/cuturalEvents/performanceSrch/view.do?key=m2501152621396&seq=13849",
+    "organizer": "제물포문화원",
+    "isFree": false,
+    "id": "63"
+  },
+  {
+    "title": "2026년 부평역사박물관 문화예술교육 프로그램 ‘AI 부평 역사 숏폼 창작소’",
+    "startDate": "2026-10-10",
+    "endDate": "2026-11-28",
+    "location": "부평역사박물관",
+    "district": "부평구",
+    "category": "교육",
+    "tags": [
+      "문화",
+      "오프라인"
+    ],
+    "sourceUrl": "https://ifac.or.kr/culturalInfo/cuturalEvents/performanceSrch/view.do?key=m2501152621396&seq=13843",
+    "organizer": "부평역사박물관",
+    "isFree": false,
+    "id": "64"
+  },
+  {
+    "title": "[2026 생생국가유산] 개항장 시간을 걷다 - 개항장으로 Go, 듣go, 걷go, 줍go",
+    "startDate": "2026-10-14",
+    "endDate": "2026-10-28",
+    "location": "제물포문화원",
+    "district": "",
+    "category": "기타",
+    "tags": [
+      "문화",
+      "오프라인"
+    ],
+    "sourceUrl": "https://ifac.or.kr/culturalInfo/cuturalEvents/performanceSrch/view.do?key=m2501152621396&seq=13848",
+    "organizer": "제물포문화원",
+    "isFree": false,
+    "id": "66"
+  },
+  {
+    "title": "인천수어문화축제",
+    "startDate": "2026-10-17",
+    "endDate": "2026-10-17",
+    "location": "인천",
+    "district": "",
+    "category": "축제",
+    "tags": [
+      "오프라인"
+    ],
+    "sourceUrl": "https://itour.incheon.go.kr/ssst/ssst/detail.do?cotId=APD25013117492111963",
+    "imageUrl": "https://itour.incheon.go.kr/common/viewImg.do?imgId=DBM26091409014130822",
+    "organizer": "인천관광재단",
+    "isFree": false,
+    "id": "70"
+  },
+  {
+    "title": "2026 인천 원도사제&낙섬축제",
+    "startDate": "2026-10-24",
+    "endDate": "2026-10-24",
+    "location": "용현5동 금호2차 아파트 옆 임시도로",
+    "district": "미추홀구",
+    "category": "축제",
+    "tags": [
+      "문화",
+      "오프라인"
+    ],
+    "sourceUrl": "https://ifac.or.kr/culturalInfo/cuturalEvents/performanceSrch/view.do?key=m2501152621396&seq=13846",
+    "organizer": "용현5동 금호2차 아파트 옆 임시도로",
+    "isFree": false,
+    "id": "77"
   }
 ]
