@@ -1,9 +1,9 @@
 name: 자동 행사 수집
 
 on:
-  # schedule:
-  #   # 매일 밤 12시 KST = UTC 15:00
-  #   - cron: '0 15 * * *'
+  schedule:
+    # 매일 밤 12시 KST = UTC 15:00
+    - cron: '0 15 * * *'
   workflow_dispatch:
 
 permissions:

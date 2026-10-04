@@ -49,4 +49,35 @@ function normalizeCategory(raw) {
   return '기타';
 }
 
-module.exports = { parseDateRange, inferDistrict, normalizeCategory };
+const HTML_ENTITIES = {
+  ndash: '–', mdash: '—', lsquo: '‘', rsquo: '’', ldquo: '“', rdquo: '”',
+  middot: '·', hellip: '…', nbsp: ' ', amp: '&', lt: '<', gt: '>', quot: '"',
+};
+
+/** 제목에 남은 HTML 엔티티 복원 + 공백 정리 */
+function cleanTitle(title) {
+  return title
+    .replace(/&([a-z]+);/g, (m, name) => HTML_ENTITIES[name] ?? m)
+    .replace(/&#(\d+);/g, (_, code) => String.fromCodePoint(Number(code)))
+    .replace(/\s+/g, ' ')
+    .trim();
+}
+
+/** 띄어쓰기만 다른 같은 행사를 잡기 위한 중복 판별 키 */
+function eventKey(e) {
+  return e.title.replace(/\s+/g, '') + '|' + e.startDate;
+}
+
+/**
+ * 키워드 필터 (filter.json)
+ * - exclude 단어가 제목에 있으면 제외
+ * - include 단어가 제목·카테고리에 없으면 제외
+ */
+function filterReason(event, filter) {
+  if (filter.exclude.some((k) => event.title.includes(k))) return 'exclude';
+  const text = `${event.title} ${event.category}`;
+  if (!filter.include.some((k) => text.includes(k))) return 'notIncluded';
+  return null;
+}
+
+module.exports = { parseDateRange, inferDistrict, normalizeCategory, cleanTitle, eventKey, filterReason };

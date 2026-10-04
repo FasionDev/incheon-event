@@ -8,16 +8,24 @@ const https = require('https');
 const http = require('http');
 const { crawlAll: crawlIfac } = require('./ifac');
 const { crawlAll: crawlItour } = require('./itour');
+const { cleanTitle, eventKey, filterReason } = require('./utils');
 
 const EVENTS_PATH = path.join(__dirname, '../../src/data/events.json');
 const SUMMARY_PATH = path.join(__dirname, '../../crawl-summary.json');
+const EXCLUDED_PATH = path.join(__dirname, 'excluded.json');
+const FILTER_PATH = path.join(__dirname, 'filter.json');
 const IMAGE_CHECK_TIMEOUT_MS = 5000;
 const IMAGE_CHECK_CONCURRENCY = 5;
 
 function isDuplicate(existing, newItem) {
-  return existing.some(
-    (e) => e.title === newItem.title && e.startDate === newItem.startDate
-  );
+  const key = eventKey(newItem);
+  return existing.some((e) => eventKey(e) === key);
+}
+
+/** 사람이 한 번 걸러낸 행사 목록 — 다시 수집되지 않도록 제외 */
+function loadExcluded() {
+  if (!fs.existsSync(EXCLUDED_PATH)) return [];
+  return JSON.parse(fs.readFileSync(EXCLUDED_PATH, 'utf-8'));
 }
 
 function generateId(existing) {
@@ -69,23 +77,33 @@ async function main() {
   const today = new Date();
   today.setHours(0, 0, 0, 0);
 
-  // 크롤링 결과 중복 제거 + 과거 행사 제외
+  // 크롤링 결과 중복 제거 + 과거 행사 제외 (이미지가 있는 itour 쪽을 우선)
   const seen = new Set();
-  const crawled = [...ifacEvents, ...itourEvents].filter((e) => {
-    const key = e.title + e.startDate;
-    if (seen.has(key)) return false;
-    seen.add(key);
-    const endDateStr = e.endDate || e.startDate;
-    return new Date(endDateStr) >= today;
-  });
+  const crawled = [...itourEvents, ...ifacEvents]
+    .map((e) => ({ ...e, title: cleanTitle(e.title) }))
+    .filter((e) => {
+      const key = eventKey(e);
+      if (seen.has(key)) return false;
+      seen.add(key);
+      const endDateStr = e.endDate || e.startDate;
+      return new Date(endDateStr) >= today;
+    });
 
-  // 기존 데이터와 중복 제거
+  // 기존 데이터와 중복 제거 + 키워드 필터·제외 목록 걸러내기
+  const filter = JSON.parse(fs.readFileSync(FILTER_PATH, 'utf-8'));
+  const excluded = loadExcluded();
   const candidates = [];
+  const skipped = { exclude: 0, notIncluded: 0, excluded: 0 };
   for (const item of crawled) {
     if (isDuplicate(existing, item)) continue;
+    const reason = filterReason(item, filter);
+    if (reason) { skipped[reason]++; continue; }
+    if (isDuplicate(excluded, item)) { skipped.excluded++; continue; }
     const { _source, ...clean } = item;
     candidates.push(clean);
   }
+
+  console.log(`필터링: 제외 단어 ${skipped.exclude}개, 포함 단어 없음 ${skipped.notIncluded}개, 제외 목록 ${skipped.excluded}개 건너뜀`);
 
   if (candidates.length === 0) {
     console.log('신규 행사 없음 — events.json 변경 없음');
