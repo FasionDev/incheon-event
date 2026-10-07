@@ -533,6 +533,22 @@
     "id": "66"
   },
   {
+    "title": "화도진 축제",
+    "startDate": "2026-10-16",
+    "endDate": "2026-10-17",
+    "location": "인천",
+    "district": "",
+    "category": "축제",
+    "tags": [
+      "오프라인"
+    ],
+    "sourceUrl": "https://itour.incheon.go.kr/ssst/ssst/detail.do?cotId=APD24042710001459725",
+    "imageUrl": "https://itour.incheon.go.kr/common/viewImg.do?imgId=API26100804411672100",
+    "organizer": "인천관광재단",
+    "isFree": false,
+    "id": "79"
+  },
+  {
     "title": "인천수어문화축제",
     "startDate": "2026-10-17",
     "endDate": "2026-10-17",
@@ -563,5 +579,21 @@
     "organizer": "용현5동 금호2차 아파트 옆 임시도로",
     "isFree": false,
     "id": "77"
+  },
+  {
+    "title": "2026 인천국제디자인페어(INDEF)",
+    "startDate": "2026-11-20",
+    "endDate": "2026-11-22",
+    "location": "인천",
+    "district": "",
+    "category": "축제",
+    "tags": [
+      "오프라인"
+    ],
+    "sourceUrl": "https://itour.incheon.go.kr/ssst/ssst/detail.do?cotId=APD21112609185307508",
+    "imageUrl": "https://itour.incheon.go.kr/common/viewImg.do?imgId=API26100804411972158",
+    "organizer": "인천관광재단",
+    "isFree": false,
+    "id": "78"
   }
 ]
