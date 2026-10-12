@@ -565,6 +565,38 @@
     "id": "70"
   },
   {
+    "title": "제25회 인천평화축제",
+    "startDate": "2026-10-17",
+    "endDate": "2026-10-17",
+    "location": "인천부평공원 소나무광장",
+    "district": "부평구",
+    "category": "축제",
+    "tags": [
+      "문화",
+      "오프라인"
+    ],
+    "sourceUrl": "https://ifac.or.kr/culturalInfo/cuturalEvents/performanceSrch/view.do?key=m2501152621396&seq=13879",
+    "organizer": "인천부평공원 소나무광장",
+    "isFree": false,
+    "id": "80"
+  },
+  {
+    "title": "제3회 언노운 북 페스티벌 (Unknown Book Festival)",
+    "startDate": "2026-10-17",
+    "endDate": "2026-10-18",
+    "location": "패치워크",
+    "district": "",
+    "category": "기타",
+    "tags": [
+      "문화",
+      "오프라인"
+    ],
+    "sourceUrl": "https://ifac.or.kr/culturalInfo/cuturalEvents/performanceSrch/view.do?key=m2501152621396&seq=13874",
+    "organizer": "패치워크",
+    "isFree": false,
+    "id": "81"
+  },
+  {
     "title": "2026 인천 원도사제&낙섬축제",
     "startDate": "2026-10-24",
     "endDate": "2026-10-24",
