@@ -693,6 +693,22 @@
     "id": "78"
   },
   {
+    "title": "2026 제4차 제물포웨이브마켓",
+    "startDate": "2026-11-21",
+    "endDate": "2026-11-22",
+    "location": "인천",
+    "district": "",
+    "category": "축제",
+    "tags": [
+      "오프라인"
+    ],
+    "sourceUrl": "https://itour.incheon.go.kr/ssst/ssst/detail.do?cotId=APD24061910001290339",
+    "imageUrl": "https://itour.incheon.go.kr/common/viewImg.do?imgId=API26111104400456235",
+    "organizer": "인천관광재단",
+    "isFree": false,
+    "id": "87"
+  },
+  {
     "title": "오슬로우 빈티지 크리스마스 마켓",
     "startDate": "2026-12-04",
     "endDate": "2026-12-20",
